@@ -215,10 +215,10 @@ vendor.opengles.version=196610
 ro.incremental.enable=1
 
 # Media
-debug.media.codec2=2
+debug.media.codec2=1
 debug.stagefright.ccodec=1
-debug.stagefright.omx_default_rank=0
-vendor.media.omx=0
+debug.stagefright.omx_default_rank=1
+vendor.media.omx=1
 debug.stagefright.c2inputsurface=-1
 media.stagefright.enable-player=true
 media.stagefright.enable-http=true
