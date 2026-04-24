@@ -215,8 +215,19 @@ vendor.opengles.version=196610
 ro.incremental.enable=1
 
 # Media
+debug.media.codec2=2
 debug.stagefright.ccodec=1
 debug.stagefright.omx_default_rank=0
+vendor.media.omx=0
+debug.stagefright.c2inputsurface=-1
+media.stagefright.enable-player=true
+media.stagefright.enable-http=true
+media.stagefright.enable-aac=true
+media.stagefright.enable-qcp=true
+media.stagefright.enable-fma2dp=true
+media.stagefright.enable-scan=true
+media.stagefright.thumbnail.prefer_hw_codecs=true
+ro.odm.build.media_performance_class=30
 
 # Netflix
 ro.netflix.bsp_rev=Q7250-19133-1
