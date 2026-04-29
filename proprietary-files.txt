@@ -394,12 +394,16 @@ vendor/lib/libmulawdec.so
 
 # Media
 vendor/lib/libOmxVideoDSMode.so
+vendor/lib/libOmxVdec.so
+vendor/lib/libOmxVenc.so
 vendor/lib/libOmxVpp.so
 vendor/lib/libmmosal.so
 vendor/lib/libwfdcommonutils_proprietary.so
 vendor/lib/libwfddisplayconfig_proprietary.so
 vendor/lib/libwfdmmservice_proprietary.so
 vendor/lib/libwfdutils_proprietary.so
+vendor/lib64/libOmxVdec.so
+vendor/lib64/libOmxVenc.so
 vendor/lib64/libOmxVpp.so
 
 # Media configs

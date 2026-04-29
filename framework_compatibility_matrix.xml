@@ -68,4 +68,22 @@
             <instance>default</instance>
         </interface>
     </hal>
+        <hal format="hidl" optional="true">
+        <name>vendor.lge.hardware.sensors.devicecontext</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IDevicecontext</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+        <hal format="hidl" optional="true">
+        <name>vendor.lge.hardware.motor</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>ILgeMotor</name>
+            <instance>PopupCam</instance>
+        </interface>
+    </hal>
 </compatibility-matrix>

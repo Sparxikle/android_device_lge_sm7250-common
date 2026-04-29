@@ -90,7 +90,8 @@ $(call soong_config_set,QTI_GPT_UTILS,USE_BSG_FRAMEWORK,false)
 # Camera
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
-    android.hardware.camera.provider@2.4-service_64
+    android.hardware.camera.provider@2.4-service_64 \
+		libhidlbase_camera_shim
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.camera.flash-autofocus.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.flash-autofocus.xml \
@@ -197,8 +198,12 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libavservices_minijail \
     libavservices_minijail.vendor \
+    libavservices_minijail_vendor \
     libcodec2_hidl@1.0.vendor \
     libcodec2_vndk.vendor \
+    libOmxVdec \
+    libOmxVenc \
+    libstagefright_softomx.vendor \
     libstagefrighthw \
     vendor.qti.hardware.capabilityconfigstore@1.0.vendor
 
@@ -312,6 +317,10 @@ PRODUCT_COPY_FILES += \
 # Vendor service manager
 PRODUCT_PACKAGES += \
     vndservicemanager
+
+# Camera shim
+PRODUCT_VENDOR_PROPERTIES += \
+    ro.vendor.qti.camera.postproc=0
 
 # Verified Boot
 PRODUCT_COPY_FILES += \

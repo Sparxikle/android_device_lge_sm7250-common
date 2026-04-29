@@ -126,6 +126,21 @@
         <fqname>@2.3::ISoundTriggerHw/default</fqname>
     </hal>
     <hal format="hidl">
+        <name>android.hardware.media.omx</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IOmx</name>
+            <instance>default</instance>
+        </interface>
+        <interface>
+            <name>IOmxStore</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@1.0::IOmx/default</fqname>
+        <fqname>@1.0::IOmxStore/default</fqname>
+    </hal>
+    <hal format="hidl">
         <name>android.hardware.tetheroffload.config</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
@@ -631,5 +646,15 @@
             <instance>default</instance>
         </interface>
         <fqname>@1.0::ITui/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.lge.hardware.motor</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>ILgeMotor</name>
+            <instance>PopupCam</instance>
+        </interface>
+        <fqname>@1.0::ILgeMotor/PopupCam</fqname>
     </hal>
 </manifest>
