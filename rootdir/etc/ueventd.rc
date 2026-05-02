@@ -419,3 +419,6 @@ firmware_directories /vendor/firmware_mnt/image/
 
 # enable parallel_restorecon for reducing boot time
 parallel_restorecon enabled
+
+# LG Pop-up motor character device
+/dev/stdrv                0660   system     system
