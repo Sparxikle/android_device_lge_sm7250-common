@@ -86,6 +86,13 @@
             <instance>PopupCam</instance>
         </interface>
     </hal>
+    <hal format="aidl" optional="true">
+        <name>vendor.wing.hardware.motor</name>
+        <interface>
+            <name>IMotor</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
         <hal format="hidl">
         <name>android.hardware.configstore</name>
         <transport>hwbinder</transport>
