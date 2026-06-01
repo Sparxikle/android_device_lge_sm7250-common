@@ -1,0 +1,26 @@
+type lge-usb-sh, domain;
+type lge-usb-sh_exec, exec_type, vendor_file_type, file_type;
+
+init_daemon_domain(lge-usb-sh)
+
+allow lge-usb-sh vendor_shell_exec:file rx_file_perms;
+allow lge-usb-sh vendor_toolbox_exec:file rx_file_perms;
+
+# Allow the script to manage USB ConfigFS
+allow lge-usb-sh configfs:dir create_dir_perms;
+allow lge-usb-sh configfs:file create_file_perms;
+allow lge-usb-sh configfs:lnk_file create_file_perms;
+
+# Allow access to USB/Gadget sysfs nodes
+allow lge-usb-sh sysfs_android_usb:dir r_dir_perms;
+allow lge-usb-sh sysfs_android_usb:file rw_file_perms;
+
+# Allow reading/writing LGE-specific vendor properties
+get_prop(lge-usb-sh, vendor_lge_usb_prop)
+set_prop(lge-usb-sh, vendor_lge_usb_prop)
+
+# Allow setting generic vendor USB properties (already defined by QCOM)
+set_prop(lge-usb-sh, vendor_usb_prop)
+
+# Allow executing lao.sh which might call other scripts
+allow lge-usb-sh lge-usb-sh_exec:file rx_file_perms;

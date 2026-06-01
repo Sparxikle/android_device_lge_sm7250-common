@@ -1,0 +1,3 @@
+/vendor/bin/init\.lge\.usb\.sh      u:object_r:lge-usb-sh_exec:s0
+/vendor/bin/init\.lge\.usb\.lao\.sh  u:object_r:lge-usb-sh_exec:s0
+/vendor/bin/init\.lge\.usb\.diag\.sh u:object_r:lge-usb-sh_exec:s0

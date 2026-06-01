@@ -328,8 +328,12 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.verified_boot.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.verified_boot.xml
 
 # Vibrator
+ifeq ($(TARGET_USE_QTI_VIBRATOR),true)
+include vendor/qcom/opensource/vibrator/vibrator-vendor-product.mk
+else
 PRODUCT_PACKAGES += \
     android.hardware.vibrator-service.lge
+endif
 
 # WiFi
 PRODUCT_PACKAGES += \
