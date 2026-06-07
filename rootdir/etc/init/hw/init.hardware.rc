@@ -19,13 +19,6 @@ import /vendor/etc/init/hw/init.lge.display.rc
 # import chipset common rc file
 import /vendor/etc/init/hw/init.lito.rc
 
-# Begin Immersion Changes
-service immvibed /vendor/bin/immvibed -p 99 -u 1000
-    class late_start
-    user root
-    group root
-    ioprio rt 4
-
 # IMEI_Protection start
 # Add ipd service
 service vendor.ipd /vendor/bin/ipd
